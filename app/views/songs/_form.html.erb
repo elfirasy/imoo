@@ -1,0 +1,36 @@
+<%= form_for [@song], :html => { :multipart => true } do |song_form| %>
+  <% if @song.errors.any? %>
+  <div id="errorExplanation">
+    <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+    <ul>
+    <% @song.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+  <% end %>
+ 
+  <div class="field">
+    <%= song_form.label :title %><br />
+    <%= song_form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= song_form.label :artist %><br />
+    <%= song_form.text_field :artist %>
+  </div>
+  <div class="field">
+    <%= song_form.label :album %><br />
+    <%= song_form.text_field :album %>
+  </div>
+  <div class="field">
+    <%= song_form.label :genre %><br />
+    <%= song_form.text_field :genre %>
+  </div>
+  <div class="field">
+    <%= song_form.label :asset, "File" %><br />
+    <%= song_form.file_field :asset %>
+  </div>
+  <div class="actions"><br/>
+    <%= song_form.submit %>
+  </div>
+<% end %>

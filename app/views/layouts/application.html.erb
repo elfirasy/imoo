@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Imoo</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div class="header">
+<h1><%= link_to "Imoo", songs_path %></h1>
+<p>A simple music directory</p>
+</div>
+
+<%= yield %>
+
+<div class="footer">
+2012 @copyright indraisto | <%= link_to "Home", songs_path %>
+</div>
+
+</body>
+</html>

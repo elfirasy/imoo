@@ -1,0 +1,30 @@
+<div class="pages">
+  <div class="content">
+    <div class="post">
+		<h1>Song list</h1>
+		<ul>
+		<% @song.each do |song| %>
+		<li>
+		  <%= link_to song.title, song %> <br/>
+		  <%= link_to "Edit", edit_song_path(song) %> |
+		  <%= link_to 'Delete', song, confirm: 'Are you sure?', method: :delete %>
+		</li>
+		<% end %>
+		</ul>
+	</div>
+  </div>
+
+  <div class="sidebar">
+    <h1>Menu</h1>
+    <h3><%= link_to "Upload New File", new_song_path %></h3>
+
+    <h1>Album List</h1>
+    <ul>
+    <% @song.each do |s| %>
+      <li><%= link_to s.album, s %></li>
+    <% end %>
+    </ul>
+
+  </div>
+  
+</div>

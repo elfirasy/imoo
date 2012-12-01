@@ -1,0 +1,246 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+* or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the top of the
+* compiled file, but it's generally better to create a new file per style scope.
+*
+*= require_self
+*= require_tree .
+*/
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+  margin-top: 20px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding-left: 10px;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+  &:visited {
+    color: #666;
+  }
+  &:hover {
+    color: #fff;
+    background-color: #555555;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+
+table{
+  border: 1px solid #333333;
+  border-radius: 5px 5px 0px 0px;
+}
+
+th{
+  border-bottom: 1px solid #333333;
+  background-color: #888888;
+}
+
+td{
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 2px;
+}
+
+.pages{
+  width: 100%;
+  margin: 0px;
+  padding: 2px;
+  float: left;
+}
+
+.content{
+  width: 70%;
+  padding: 2px;
+  float: left;
+}
+
+.post{
+  width: 100%;
+  float: left;
+  margin: 2px;
+  padding: 2px;
+}
+
+.post h1{
+  width: 98%;
+  color: #ffffff;
+  font-size: 16px;
+  border: 1px solid #444444;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #555555;
+  padding: 5px;
+  margin-bottom: 3px;
+}
+
+.content h2{
+  width: 98%;
+  color: #333333;
+  font-size: 14px;
+}
+
+.post p{
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 12px;
+  border: 1px solid #444444;
+  border-radius: 0px 0px 3px 3px;
+}
+
+.post small{
+  font-size: 9px;
+  font-style: italic;
+  font-color: #333333;
+}
+
+.sidebar{
+  width: 25%;
+  float: right;
+  padding: 2px;
+}
+
+.sidebar h1{
+  float: left;
+  width: 100%;
+  font-size: 14px;
+  border: 1px solid #ffff00;
+  border-radius: 5px 5px 0px 0px;
+  background-color: #ffcc00;
+  margin-bottom: 2px;
+  padding: 5px;
+}
+
+.sidebar h3{
+  float: left;
+  font-size: 12px;
+  width: 100%;
+  padding: 5px;
+}
+
+.sidebar ul{
+  width: 100%;
+  float: left;
+  font-size: 12px;
+  margin-left: 10px;
+  padding-left: 5px;
+}
+
+.sidebar ul li{
+  width: 100%;
+  color: #333333;
+}
+
+ul li:hover{
+  color: #222222;
+}
+
+form{
+  padding-left: 10px;
+  margin: 1px;
+}
+
+.comment{
+  width: 99%;
+  float: left;
+  margin-bottom: 3px;
+  border: 1px solid #444444;
+  border-radius: 5px 0px;
+  margin-left: 10px;
+}
+
+.comment p{
+  width: 100%;
+  font-size: 11px;
+  margin-top: -5px;
+  margin-bottom: -3px;
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.comment small{
+  padding-left: 10px;
+  font-size: 10px;
+}
+
+.footer{
+  width: 70%;
+  margin-top: 20px;
+  margin-left: 5px;
+  padding: 2px;
+  float: left;
+  border-top: 1px solid #444444;
+  color: #333333;
+}
+
+.header{
+  width: 100%;
+  margin: 20px 0px;
+  padding: 2px;
+  float: left;
+  border-bottom: 2px solid #444444;
+  color: #333333;
+}
+.header a{
+  text-decoration:none;
+}

@@ -1,0 +1,23 @@
+<div class="pages">
+  <div class="content">
+    <div class="post">
+		<h1>Upload New Music File</h1>
+		<%= render 'form' %>
+	</div>
+  </div>
+
+  <div class="sidebar">
+    <h1>Menu</h1>
+    <h3><%= link_to "Upload New File", new_song_path %><br/>
+    <%= link_to 'Back', songs_path %></h3>
+
+    <h1>Album List</h1>
+    <ul>
+    <% @song_list.each do |s| %>
+      <li><%= link_to s.album, s %></li>
+    <% end %>
+    </ul>
+
+  </div>
+  
+</div>
