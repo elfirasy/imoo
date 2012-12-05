@@ -1,0 +1,40 @@
+<div class="pages">
+  <div class="content">
+    <div class="post">
+		<h1><%= @song.title %></h1>
+    <p>
+      <%= image_tag @song.cover.url(:thumb) %>
+      Title&ensp;&ensp; :<%= @song.title %><br/>
+      Artist&ensp; :<%= @song.artist %><br/>
+      Album&ensp;:<%= @song.album %><br/>
+      Genre&ensp; :<%= @song.genre %><br/>
+      File&ensp;&ensp;&ensp; :<br/>
+      <% if @song.asset.exists? %>
+        <%= link_to File.basename(@song.asset.path), @song.asset.url %>
+        <br/>
+        <audio controls="controls" autobuffer="autobuffer" >
+          <%= audio_tag @song.asset.url, :type => "audio/mpeg" %>
+          Browser anda tidak mendukung HTML5 audio. Silahkan update browser anda!
+        </audio>
+      <% else %>
+        <strong style="color: #224466;">no such file exist</strong>
+      <% end %>
+    </p>
+	</div>
+  </div>
+
+  <div class="sidebar">
+    <h1>Menu</h1>
+    <h3><%= link_to "Upload New File", new_song_path %><br/>
+    <%= link_to 'Back', songs_path %></h3>
+
+    <h1>Album List</h1>
+    <ul>
+    <% @song_list.each do |s| %>
+      <li><%= link_to s.album, s %></li>
+    <% end %>
+    </ul>
+
+  </div>
+  
+</div>

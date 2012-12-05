@@ -148,6 +148,15 @@ td{
   border-radius: 0px 0px 3px 3px;
 }
 
+.post img{
+  float: right;
+  width: 20%;
+  padding: 2px;
+  margin: 3px;
+  border: 1px solid #ffcc00;
+  border-radius: 3px;
+}
+
 .post small{
   font-size: 9px;
   font-style: italic;

@@ -27,7 +27,11 @@
     <%= song_form.text_field :genre %>
   </div>
   <div class="field">
-    <%= song_form.label :asset, "File" %><br />
+    <%= song_form.label :cover, "Cover Image" %><br />
+    <%= song_form.file_field :cover %>
+  </div>
+  <div class="field">
+    <%= song_form.label :asset, "Music File" %><br />
     <%= song_form.file_field :asset %>
   </div>
   <div class="actions"><br/>
