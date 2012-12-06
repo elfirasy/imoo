@@ -1,5 +1,3 @@
-require 'songs_helper'
-
 class SongsController < ApplicationController
 	
   def index
@@ -25,13 +23,29 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
+    # raise @song.as_json.inspect
     @song_list = Song.all
-
     respond_to do | format |
-      format.html # show.html.erb
-      format.json { render :json => @song }
-      format.xml { render :xml => @song, :content_type => 'application/rss', :layout => false }
-      format.png { render :file => @song.cover.url, :content_type => 'image/png'}
+      format.html
+
+      # format.json { render :json => @song }
+      format.json { render :json => { :id => params[:id] , :song => @song.as_json(:only => [:artist, :title, :album, :genre ] ) } }
+      format.xml { render :xml => @song }
+
+      if @song.cover.path != nil
+        format.png { send_file( @song.cover.path, :type => 'image/png', :disposition => 'attachment') }
+        format.jpg { send_file( @song.cover.path, :type => 'image/jpg', :disposition => 'attachment') }
+      else
+        format.html
+      end
+
+      if @song.asset.path != nil
+        format.mp3 { send_file( @song.asset.path, :type => 'audio/mpeg3', :disposition => 'attachment') }
+        format.ogg { send_file( @song.asset.path, :type => 'audio/ogg', :disposition => 'attachment') }
+      else
+        format.html
+      end
+        
     end
   end
 

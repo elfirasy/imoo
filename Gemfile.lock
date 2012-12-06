@@ -115,6 +115,7 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
+  mime-types
   paperclip
   rails (= 3.2.3)
   sass-rails (~> 3.2.3)

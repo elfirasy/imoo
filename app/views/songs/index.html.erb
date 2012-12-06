@@ -18,10 +18,10 @@
     <h1>Menu</h1>
     <h3><%= link_to "Upload New File", new_song_path %></h3>
 
-    <h1>Album List</h1>
+    <h1>New List</h1>
     <ul>
     <% @song.each do |s| %>
-      <li><%= link_to s.album, s %></li>
+      <li><%= link_to s.title, s %></li>
     <% end %>
     </ul>
 
