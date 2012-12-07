@@ -1,13 +1,14 @@
 <%= form_for [@song], :html => { :multipart => true } do |song_form| %>
+
   <% if @song.errors.any? %>
-  <div id="errorExplanation">
-    <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
-    <ul>
-    <% @song.errors.full_messages.each do |msg| %>
-      <li><%= msg %></li>
-    <% end %>
-    </ul>
-  </div>
+    <div id="errorExplanation">
+      <h2><%= pluralize(@song.errors.count, "error") %> prohibited this song from being saved:</h2>
+      <ul>
+      <% @song.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
   <% end %>
  
   <div class="field">

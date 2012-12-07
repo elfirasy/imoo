@@ -23,12 +23,10 @@ class SongsController < ApplicationController
 
   def show
     @song = Song.find(params[:id])
-    # raise @song.as_json.inspect
     @song_list = Song.all
     respond_to do | format |
       format.html
 
-      # format.json { render :json => @song }
       format.json { render :json => { :id => params[:id] , :song => @song.as_json(:only => [:artist, :title, :album, :genre ] ) } }
       format.xml { render :xml => @song }
 
