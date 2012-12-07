@@ -12,15 +12,15 @@
  
   <div class="field">
     <%= song_form.label :title %><br />
-    <%= song_form.text_field :title %>
+    <%= song_form.text_field :title, :required => "required" %>
   </div>
   <div class="field">
     <%= song_form.label :artist %><br />
-    <%= song_form.text_field :artist %>
+    <%= song_form.text_field :artist, :required => "required" %>
   </div>
   <div class="field">
     <%= song_form.label :album %><br />
-    <%= song_form.text_field :album %>
+    <%= song_form.text_field :album, :required => "required" %>
   </div>
   <div class="field">
     <%= song_form.label :genre %><br />
@@ -28,11 +28,11 @@
   </div>
   <div class="field">
     <%= song_form.label :cover, "Cover Image" %><br />
-    <%= song_form.file_field :cover %>
+    <%= song_form.file_field :cover, :required => "required" %>
   </div>
   <div class="field">
     <%= song_form.label :asset, "Music File" %><br />
-    <%= song_form.file_field :asset %>
+    <%= song_form.file_field :asset, :required => "required" %>
   </div>
   <div class="actions"><br/>
     <%= song_form.submit %>

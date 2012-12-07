@@ -32,6 +32,7 @@ class SongsController < ApplicationController
       format.json { render :json => { :id => params[:id] , :song => @song.as_json(:only => [:artist, :title, :album, :genre ] ) } }
       format.xml { render :xml => @song }
 
+      # check the cover image
       if @song.cover.path != nil
         format.png { send_file( @song.cover.path, :type => 'image/png', :disposition => 'attachment') }
         format.jpg { send_file( @song.cover.path, :type => 'image/jpg', :disposition => 'attachment') }
@@ -39,6 +40,7 @@ class SongsController < ApplicationController
         format.html
       end
 
+      # check the song file
       if @song.asset.path != nil
         format.mp3 { send_file( @song.asset.path, :type => 'audio/mpeg3', :disposition => 'attachment') }
         format.ogg { send_file( @song.asset.path, :type => 'audio/ogg', :disposition => 'attachment') }
